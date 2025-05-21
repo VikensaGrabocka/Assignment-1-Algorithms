@@ -32,14 +32,15 @@ public class BigWeatherConfiguration {
                     numOfPossibleBonds = Integer.parseInt(data[1]);
                     bucketCost = Integer.parseInt(data[2]);
                     bondCost = Integer.parseInt(data[3]);
-                    continue;
-                }
-                String[] pair = line.split(" {2}");
-                int dyno1 = Integer.parseInt(pair[0]);
-                int dyno2 = Integer.parseInt(pair[1]);
-                for (int i = 0; i < dynoNumber + 1; i++) {
+                    for (int i = 0; i < dynoNumber + 1; i++) {
                     adjacencyList.add(new ArrayList<>());
                 }
+
+                    continue;
+                }
+                String[] pair = line.split(" ");
+                int dyno1 = Integer.parseInt(pair[0]);
+                int dyno2 = Integer.parseInt(pair[1]);
                 adjacencyList.get(dyno1).add(dyno2);
                 adjacencyList.get(dyno2).add(dyno1);
                 visited = new boolean[dynoNumber + 1];

@@ -1,7 +1,6 @@
 # Assignment 1
 
-The author of this project is Vikensa Grabocka. This
-program aims to solve the problem of finding the 
+This program aims to solve the problem of finding the 
 cheapest configuration of a computing grid used to 
 predict weather. It reads a file provided by the user
 and based on the given data it computes the cheapest cost, the
